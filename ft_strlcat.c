@@ -6,28 +6,54 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 22:20:32 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/14 22:20:32 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/15 04:21:58 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-    int d_c;
-    int s_c;
-    int c;
-    d_c = strlen(dest);
-    s_c = strlen(src);
-    if (dstsize <= d_c || dstsize == 0)
-        return (s_c + dstsize);
-    c = 0;
-    while (*src && d_c + c < dstsize - 1)
-    {
-        dest[d_c + c] = *src;
-        c++;
-        src++;
-    }
-    dest[d_c + c] = '\0';
-    return (d_c + s_c);
+	size_t	dest_l;
+	size_t	src_l;
+	size_t	c;
+
+	dest_l = strlen(dest);
+	src_l = strlen(src);
+	if (dstsize <= dest_l || dstsize == 0)
+		return (src_l + dstsize);
+	c = 0;
+	while (src[c] && dest_l + c < dstsize - 1)
+	{
+		dest[dest_l + c] = src[c];
+		c++;
+	}
+	dest[dest_l + c] = '\0';
+	return (dest_l + src_l);
 }
+/*
+int main(void)
+{
+    char arr[10] = "AAAAA";
+    char arr1[10] = "AAA";
+    char arr2[10] = "AAA";
+
+    char src[] = "hi42kay";
+    printf("my %zu\n", ft_strlcat(arr, src, 2));
+    printf("my %s\n", arr);
+    printf("real %zu\n", strlcat(arr, src, 2));
+    printf("real %s\n\n", arr);
+
+    printf("my %zu\n", ft_strlcat(arr1, src, 10));
+    printf("my %s\n", arr1);
+    printf("real %zu\n", strlcat(arr2, src, 10));
+    printf("real %s\n", arr2);
+
+	char arr3[40];
+	memset(arr3, 'A', 15);
+	printf("result %zu \n", ft_strlcat(arr3, "lorem ipsum dolor sit amet", 5));
+	printf("%s", arr3);
+
+
+}
+*/
