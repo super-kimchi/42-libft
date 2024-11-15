@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 22:20:32 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/15 04:21:58 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/15 19:58:31 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,5 @@ int main(void)
 	memset(arr3, 'A', 15);
 	printf("result %zu \n", ft_strlcat(arr3, "lorem ipsum dolor sit amet", 5));
 	printf("%s", arr3);
-
-
 }
 */
