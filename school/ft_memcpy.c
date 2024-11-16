@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*start;
 	const unsigned char	*start_src;
 
+	if (dest == NULL || src == NULL)
+		return NULL;
 	start = dest;
 	start_src = src;
 	while (n > 0)
@@ -28,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 #include <string.h>
 int	main(void)
 {
@@ -45,5 +47,7 @@ int	main(void)
 	printf("\n:%s:\n", arr1);
 	ft_memcpy(arr1, "AA", 2);
 	printf(":%s:\n", arr1);
+
+	printf("%p", memcpy((void *)0, (void *)0, 3));
 }
-*/
+
