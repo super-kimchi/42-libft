@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 18:38:41 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/13 20:12:15 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/16 06:25:49 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*start;
 	const unsigned char	*start_src;
 
-	if (dest == NULL || src == NULL)
-		return NULL;
 	start = dest;
 	start_src = src;
+	if (dest == NULL && src == NULL)
+		return (dest);
 	while (n > 0)
 	{
 		*start = *start_src;
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 #include <string.h>
 int	main(void)
 {
@@ -47,7 +47,9 @@ int	main(void)
 	printf("\n:%s:\n", arr1);
 	ft_memcpy(arr1, "AA", 2);
 	printf(":%s:\n", arr1);
-
-	printf("%p", memcpy((void *)0, (void *)0, 3));
+	char arr2[] = "hi42kay";
+	printf("%p", ft_memcpy(arr1, (void *)0, 3));
+	//printf("%p", memcpy((void *)0, (void *)0, 3));
+	
 }
-
+*/
