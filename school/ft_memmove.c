@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 20:20:06 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/16 06:59:43 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:32:12 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,31 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*start;
-	unsigned char	*start_src;
-	int	c;
-
+	size_t	c;
+	
 	if (dest == NULL && src == NULL)
 		return (dest);
-	if (dest - src > 0)
+	if (dest > src)
 	{
-		start = (unsigned char *)dest + n - 1;
-		start_src = (unsigned char *)src + n - 1;
+		c = n;
+		while (c > 0)
+		{
+			c--;
+			((char *)dest)[c] = ((const char *)src)[c];
+		}
 	}
 	else
 	{
-		start = (unsigned char *)dest;
-		start_src = (unsigned char *)src;
-	}
-	while (n > 0)
-	{
-		start[c] = start_src[c];
-		if (dest - src > 0)
-			c--;
-		else
+		c = 0;
+		while (c < n)
+		{
+			((char *)dest)[c] = ((const char *)src)[c];
 			c++;
-		n--;
+		}
 	}
 	return (dest);
 }
-
+/*
 #include <string.h>
 
 int	main(void)
@@ -76,4 +73,4 @@ int	main(void)
 	printf("%s\n", dst1);
 
 }
-
+*/
