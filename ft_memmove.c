@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 20:20:06 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/18 19:32:12 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/19 09:18:55 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	c;
-	
+
 	if (dest == NULL && src == NULL)
 		return (dest);
 	if (dest > src)

@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:44:05 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/19 08:32:57 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/19 09:23:34 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 #endif
