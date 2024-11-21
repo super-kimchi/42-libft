@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 05:42:41 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/21 07:46:15 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/21 09:03:55 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static	int	str_int(const char *nptr, unsigned int sum)
 int	ft_atoi(const char *nptr)
 {
 	int	positive;
-	
+
 	positive = 1;
 	while ((9 <= *nptr && *nptr <= 13) || *nptr == ' ')
 		nptr++;
