@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 08:21:46 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/21 09:44:41 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:03:23 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	main(void)
 	printf("%p %x", calloc(10, 0), *((char *)calloc(10, 0)));
 	printf("%p %x\n", ft_calloc(10, 0), *((char *)ft_calloc(10, 0)));
 	//printf("%p %x\n", ft_calloc(SIZE_MAX, SIZE_MAX), *((char *)ft_calloc(SIZE_MAX, SIZE_MAX)));
-	//printf("%p %x\n", calloc(SIZE_MAX, SIZE_MAX), *((char *)calloc(SIZE_MAX, SIZE_MAX)));
+	printf("%p %x\n", calloc(SIZE_MAX, SIZE_MAX), *((char *)calloc(SIZE_MAX, SIZE_MAX)));
 }
 */
