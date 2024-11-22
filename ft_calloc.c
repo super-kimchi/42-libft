@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 08:21:46 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/21 10:03:23 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/22 04:51:33 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*result;
 
 	if (nmemb == 0 || size == 0)
-		result = malloc(1);
-	else
-		result = malloc(nmemb * size);
+	{
+		result = malloc(0);
+		if (!result)
+			return (NULL);
+		return (result);
+	}
+	result = malloc(nmemb * size);
 	if (!result)
 		return (NULL);
 	ft_bzero(result, nmemb * size);
