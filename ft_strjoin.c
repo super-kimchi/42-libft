@@ -6,13 +6,13 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 05:57:50 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/22 06:37:17 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/22 08:02:13 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*result;
 	size_t	size;
