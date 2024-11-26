@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:51:38 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/27 01:41:14 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 03:38:37 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,12 @@ char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	int		sep_c;
-	int		i;
 	int		arr_c;
 
 	sep_c = count(s, c);
 	arr = (char **)malloc((sep_c + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
-	i = 0;
 	arr_c = 0;
 	while (arr_c < sep_c)
 	{
