@@ -6,13 +6,13 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:51:38 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/27 01:38:21 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 01:41:14 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*seperator(char const *s, int sep)
+static char	*seperator(char const *s, int sep)
 {
 	char	*str;
 	int		c;
@@ -32,7 +32,7 @@ char	*seperator(char const *s, int sep)
 	return (str);
 }
 
-int	count(char const *s, char c)
+static int	count(char const *s, char c)
 {
 	int	i;
 	int	sep_c;
