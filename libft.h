@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:44:05 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/27 05:45:34 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 07:25:13 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 
 # include <bsd/string.h>
 # include <stdio.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
