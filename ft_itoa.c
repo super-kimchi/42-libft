@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 01:39:29 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/27 03:37:58 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 05:36:40 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count(int n)
 {
 	int	c;
-	
+
 	if (n < 0)
 		c = 2;
 	else
@@ -37,10 +37,10 @@ static void	int_to_str(char *str, long n, int i)
 		return ;
 	}
 	str[i] = (n % 10) + '0';
-	return int_to_str(str, n / 10, --i);
+	return (int_to_str(str, n / 10, --i));
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		c;
 	char	*str;

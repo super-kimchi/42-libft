@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:51:38 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/27 03:38:37 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 07:16:50 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static char	*seperator(char const *s, int sep)
 	while (s[c] != sep && s[c])
 		c++;
 	str = (char *)malloc(c + 1);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (i < c)
 	{
@@ -55,6 +57,14 @@ static int	count(char const *s, char c)
 	return (sep_c);
 }
 
+static char	**error_free(char **arr, int arr_c)
+{
+	while (--arr_c >= 0)
+		free(arr[arr_c]);
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -71,6 +81,8 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		arr[arr_c] = seperator(s, c);
+		if (!arr[arr_c])
+			return (error_free(arr, arr_c));
 		s = s + ft_strlen(arr[arr_c]);
 		arr_c++;
 	}
@@ -82,7 +94,7 @@ int	main(void)
 {
 //	char	**test = ft_split("hi 42 kay", ' ');
 //	char	**test1 = ft_split("", ' ');
-	char	**test2 = ft_split("xxxxxxxxhello!", 'x');
+	char	**test2 = ft_split("xxxxxxxxhello!", ' ');
 
 //	for (int i = 0; i < 4; i++)
 //		printf(":%s: ", test[i]);

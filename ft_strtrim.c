@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 06:37:48 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/22 08:01:00 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/11/27 06:34:58 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (ft_strlen(s1) == 0)
 	{
 		result = (char *)malloc(1);
+		if (!result)
+			return (NULL);
 		*result = 0;
 		return (result);
 	}
