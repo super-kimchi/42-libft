@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 20:20:06 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/11/19 09:18:55 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:06:24 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ int	main(void)
     ft_memmove(dst2, dst2 + 3, size);
 	printf("%s\n", dst1);
 	printf("%s\n", dst1);
+
+	printf("%s\n", (char *)ft_memmove(NULL, NULL, 2));
 
 }
 */
