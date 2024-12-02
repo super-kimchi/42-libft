@@ -6,22 +6,22 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 18:14:05 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/12/01 19:05:40 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/12/02 09:50:16 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*lastnode;
 
 	if (!lst || !new)
-			return;
+		return ;
 	if (!(*lst))
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	lastnode = *lst;
 	while (lastnode->next)
