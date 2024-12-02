@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 09:50:52 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/12/02 10:58:59 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:38:43 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 
-	if (!lst || !(*lst))
+	if (!lst || !(*lst) || !del)
 		return ;
 	while (*lst)
 	{

@@ -6,12 +6,37 @@
 /*   By: kyungkim <kyungkim@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:48:22 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/12/02 14:43:19 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:02:58 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*head;
+	t_list	*node;
+	void	*node_c;
+
+	head = 0;
+	if (!f || !del || !lst)
+		return (NULL);
+	while (lst)
+	{
+		node_c = f(lst->content);
+		node = ft_lstnew(node_c);
+		if (!node)
+		{
+			del(node_c);
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, node);
+		lst = lst->next;
+	}
+	return (head);
+}
+/*
 static t_list	*create_node(t_list *head, void (*del)(void *))
 {
 	t_list	*node;
@@ -24,19 +49,8 @@ static t_list	*create_node(t_list *head, void (*del)(void *))
 	}
 	return (node);
 }
-
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list	*head;
-	t_list	*new;
-	t_list	*node;
-
-	new = 0;
-	head = 0;
-	if (!f || !del || !lst)
-		return (NULL);
-	while (lst)
-	{
+*/
+/*
 		node = create_node(head, del);
 		if (!node)
 			return (NULL);
@@ -48,9 +62,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new->content = f(lst->content);
 		new->next = NULL;
 		lst = lst->next;
-	}
-	return (head);
-}
+*/
 /*
 void	*nextcha(void	*content)
 {
