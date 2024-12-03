@@ -6,7 +6,7 @@
 /*   By: kyungkim <kyungkim@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:44:05 by kyungkim          #+#    #+#             */
-/*   Updated: 2024/12/02 14:16:08 by kyungkim         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:14:04 by kyungkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 # include <stddef.h>
 # include <stdlib.h>
-# include <stdint.h>
-# include <fcntl.h>
 # include <unistd.h>
 
-# include <string.h>
-# include <stdio.h>
+//# include <string.h>
+//# include <stdio.h>
+//# include <fcntl.h>
+//# include <stdint.h>
 
 typedef struct s_list
 {
